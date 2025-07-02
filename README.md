@@ -16,7 +16,7 @@ pip install -r requirements.txt
 4. PostgreSQL & Redis Setup (Local)
 Install and run:
 
-PostgreSQL → create DB: productdb, user: postgres, password: root
+PostgreSQL → create DB: productdb, user: postgres, password: postgres
 
 Redis → run with redis-server
 
