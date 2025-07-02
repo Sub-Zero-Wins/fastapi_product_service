@@ -35,5 +35,5 @@ User: user / user123
 7. Running Tests
 Make sure Redis and DB are running locally:
 
-# from project root
+from project root
 $env:PYTHONPATH="."; pytest         
