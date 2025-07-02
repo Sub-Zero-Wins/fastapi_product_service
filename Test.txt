@@ -1,0 +1,402 @@
+0. Bulk Upload 
+ {
+  "products": [
+    {
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Over-ear noise-cancelling headphones with 30 hours of battery life.",
+      "price": 89.99,
+      "in_stock": true
+    },
+    {
+      "name": "Ergonomic Office Chair",
+      "description": "Adjustable chair with lumbar support and breathable mesh back.",
+      "price": 159.49,
+      "in_stock": true
+    },
+    {
+      "name": "Stainless Steel Water Bottle",
+      "description": "Insulated 1-liter bottle that keeps drinks cold for 24 hours.",
+      "price": 24.95,
+      "in_stock": false
+    },
+    {
+      "name": "4K Ultra HD Monitor",
+      "description": "27-inch 3840x2160 display with HDR support and ultra-thin bezel.",
+      "price": 329.0,
+      "in_stock": true
+    },
+    {
+      "name": "USB-C Charging Cable (2-Pack)",
+      "description": "Durable nylon braided cables, 6ft length, fast charging compatible.",
+      "price": 12.99,
+      "in_stock": true
+    },
+    {
+      "name": "Smart LED Light Bulb",
+      "description": "Color-changing bulb with voice control and scheduling.",
+      "price": 14.99,
+      "in_stock": true
+    },
+    {
+      "name": "Portable SSD 1TB",
+      "description": "High-speed external storage with USB 3.2 support.",
+      "price": 119.99,
+      "in_stock": false
+    },
+    {
+      "name": "Mechanical Gaming Keyboard",
+      "description": "RGB backlit keyboard with blue tactile switches.",
+      "price": 79.99,
+      "in_stock": true
+    },
+    {
+      "name": "Noise-Cancelling Earbuds",
+      "description": "True wireless earbuds with ANC and wireless charging case.",
+      "price": 59.99,
+      "in_stock": true
+    },
+    {
+      "name": "Adjustable Laptop Stand",
+      "description": "Aluminum stand with ventilation and angle adjustment.",
+      "price": 39.95,
+      "in_stock": true
+    },
+    {
+      "name": "Smartphone Gimbal Stabilizer",
+      "description": "3-axis handheld gimbal for smooth video recording.",
+      "price": 99.99,
+      "in_stock": false
+    },
+    {
+      "name": "Fitness Tracker Watch",
+      "description": "Waterproof activity tracker with heart rate monitor.",
+      "price": 49.99,
+      "in_stock": true
+    },
+    {
+      "name": "Desktop Microphone",
+      "description": "USB condenser mic for podcasting and streaming.",
+      "price": 69.99,
+      "in_stock": true
+    },
+    {
+      "name": "Mini Projector",
+      "description": "Portable projector with HDMI and USB support.",
+      "price": 199.0,
+      "in_stock": false
+    },
+    {
+      "name": "Smart Thermostat",
+      "description": "WiFi-enabled thermostat with smartphone control.",
+      "price": 139.0,
+      "in_stock": true
+    },
+    {
+      "name": "Wireless Charging Pad",
+      "description": "Fast wireless charger compatible with most smartphones.",
+      "price": 19.95,
+      "in_stock": true
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "description": "Water-resistant speaker with 12 hours of battery life.",
+      "price": 45.5,
+      "in_stock": false
+    },
+    {
+      "name": "Digital Drawing Tablet",
+      "description": "Graphics tablet with pen pressure sensitivity.",
+      "price": 89.99,
+      "in_stock": true
+    },
+    {
+      "name": "Cordless Electric Drill",
+      "description": "20V drill with two batteries and charger.",
+      "price": 119.49,
+      "in_stock": true
+    },
+    {
+      "name": "LED Desk Lamp",
+      "description": "Dimmable lamp with touch control and USB charging port.",
+      "price": 29.99,
+      "in_stock": true
+    },
+    {
+      "name": "Gaming Mouse",
+      "description": "Ergonomic mouse with adjustable DPI and RGB lighting.",
+      "price": 34.99,
+      "in_stock": true
+    },
+    {
+      "name": "Streaming Webcam",
+      "description": "1080p HD webcam with built-in microphone.",
+      "price": 59.99,
+      "in_stock": true
+    },
+    {
+      "name": "Electric Kettle",
+      "description": "1.7L stainless steel kettle with auto shut-off.",
+      "price": 44.99,
+      "in_stock": false
+    },
+    {
+      "name": "Portable Air Purifier",
+      "description": "HEPA filter purifier for home or office use.",
+      "price": 89.0,
+      "in_stock": true
+    },
+    {
+      "name": "Rechargeable Hand Warmer",
+      "description": "Dual-sided heater with USB charging.",
+      "price": 25.99,
+      "in_stock": true
+    },
+    {
+      "name": "Bike Phone Mount",
+      "description": "Universal holder with 360-degree rotation.",
+      "price": 16.95,
+      "in_stock": true
+    },
+    {
+      "name": "Smart Plug (4-Pack)",
+      "description": "Voice-controlled outlets with energy monitoring.",
+      "price": 35.0,
+      "in_stock": true
+    },
+    {
+      "name": "Infrared Thermometer",
+      "description": "Contactless thermometer for body or surface temperature.",
+      "price": 27.49,
+      "in_stock": false
+    },
+    {
+      "name": "Wireless Mouse",
+      "description": "Compact wireless mouse with silent clicks.",
+      "price": 14.95,
+      "in_stock": true
+    },
+    {
+      "name": "Travel Power Adapter",
+      "description": "Universal international adapter with USB ports.",
+      "price": 22.99,
+      "in_stock": true
+    }
+  ]
+}
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/products/bulk-upload' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "products": [
+    {
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Over-ear noise-cancelling headphones with 30 hours of battery life.",
+      "price": 89.99,
+      "in_stock": true
+    },
+    {
+      "name": "Ergonomic Office Chair",
+      "description": "Adjustable chair with lumbar support and breathable mesh back.",
+      "price": 159.49,
+      "in_stock": true
+    },
+    {
+      "name": "Stainless Steel Water Bottle",
+      "description": "Insulated 1-liter bottle that keeps drinks cold for 24 hours.",
+      "price": 24.95,
+      "in_stock": false
+    },
+    {
+      "name": "4K Ultra HD Monitor",
+      "description": "27-inch 3840x2160 display with HDR support and ultra-thin bezel.",
+      "price": 329.0,
+      "in_stock": true
+    },
+    {
+      "name": "USB-C Charging Cable (2-Pack)",
+      "description": "Durable nylon braided cables, 6ft length, fast charging compatible.",
+      "price": 12.99,
+      "in_stock": true
+    },
+    {
+      "name": "Smart LED Light Bulb",
+      "description": "Color-changing bulb with voice control and scheduling.",
+      "price": 14.99,
+      "in_stock": true
+    },
+    {
+      "name": "Portable SSD 1TB",
+      "description": "High-speed external storage with USB 3.2 support.",
+      "price": 119.99,
+      "in_stock": false
+    },
+    {
+      "name": "Mechanical Gaming Keyboard",
+      "description": "RGB backlit keyboard with blue tactile switches.",
+      "price": 79.99,
+      "in_stock": true
+    },
+    {
+      "name": "Noise-Cancelling Earbuds",
+      "description": "True wireless earbuds with ANC and wireless charging case.",
+      "price": 59.99,
+      "in_stock": true
+    },
+    {
+      "name": "Adjustable Laptop Stand",
+      "description": "Aluminum stand with ventilation and angle adjustment.",
+      "price": 39.95,
+      "in_stock": true
+    },
+    {
+      "name": "Smartphone Gimbal Stabilizer",
+      "description": "3-axis handheld gimbal for smooth video recording.",
+      "price": 99.99,
+      "in_stock": false
+    },
+    {
+      "name": "Fitness Tracker Watch",
+      "description": "Waterproof activity tracker with heart rate monitor.",
+      "price": 49.99,
+      "in_stock": true
+    },
+    {
+      "name": "Desktop Microphone",
+      "description": "USB condenser mic for podcasting and streaming.",
+      "price": 69.99,
+      "in_stock": true
+    },
+    {
+      "name": "Mini Projector",
+      "description": "Portable projector with HDMI and USB support.",
+      "price": 199.0,
+      "in_stock": false
+    },
+    {
+      "name": "Smart Thermostat",
+      "description": "WiFi-enabled thermostat with smartphone control.",
+      "price": 139.0,
+      "in_stock": true
+    },
+    {
+      "name": "Wireless Charging Pad",
+      "description": "Fast wireless charger compatible with most smartphones.",
+      "price": 19.95,
+      "in_stock": true
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "description": "Water-resistant speaker with 12 hours of battery life.",
+      "price": 45.5,
+      "in_stock": false
+    },
+    {
+      "name": "Digital Drawing Tablet",
+      "description": "Graphics tablet with pen pressure sensitivity.",
+      "price": 89.99,
+      "in_stock": true
+    },
+    {
+      "name": "Cordless Electric Drill",
+      "description": "20V drill with two batteries and charger.",
+      "price": 119.49,
+      "in_stock": true
+    },
+    {
+      "name": "LED Desk Lamp",
+      "description": "Dimmable lamp with touch control and USB charging port.",
+      "price": 29.99,
+      "in_stock": true
+    },
+    {
+      "name": "Gaming Mouse",
+      "description": "Ergonomic mouse with adjustable DPI and RGB lighting.",
+      "price": 34.99,
+      "in_stock": true
+    },
+    {
+      "name": "Streaming Webcam",
+      "description": "1080p HD webcam with built-in microphone.",
+      "price": 59.99,
+      "in_stock": true
+    },
+    {
+      "name": "Electric Kettle",
+      "description": "1.7L stainless steel kettle with auto shut-off.",
+      "price": 44.99,
+      "in_stock": false
+    },
+    {
+      "name": "Portable Air Purifier",
+      "description": "HEPA filter purifier for home or office use.",
+      "price": 89.0,
+      "in_stock": true
+    },
+    {
+      "name": "Rechargeable Hand Warmer",
+      "description": "Dual-sided heater with USB charging.",
+      "price": 25.99,
+      "in_stock": true
+    },
+    {
+      "name": "Bike Phone Mount",
+      "description": "Universal holder with 360-degree rotation.",
+      "price": 16.95,
+      "in_stock": true
+    },
+    {
+      "name": "Smart Plug (4-Pack)",
+      "description": "Voice-controlled outlets with energy monitoring.",
+      "price": 35.0,
+      "in_stock": true
+    },
+    {
+      "name": "Infrared Thermometer",
+      "description": "Contactless thermometer for body or surface temperature.",
+      "price": 27.49,
+      "in_stock": false
+    },
+    {
+      "name": "Wireless Mouse",
+      "description": "Compact wireless mouse with silent clicks.",
+      "price": 14.95,
+      "in_stock": true
+    },
+    {
+      "name": "Travel Power Adapter",
+      "description": "Universal international adapter with USB ports.",
+      "price": 22.99,
+      "in_stock": true
+    }
+  ]
+}
+'
+http://127.0.0.1:8000/api/v1/products/bulk-upload
+
+1. Create Product 
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/products/' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "iphone 16",
+  "description": "the new iphone 16 pro max 1TB",
+  "price": 150000.00,
+  "in_stock": true
+}'
+
+http://127.0.0.1:8000/api/v1/products
+
+2. Get product by Id 
+   curl -X 'GET' \
+  'http://127.0.0.1:8000/api/v1/products/1' \
+  -H 'accept: application/json'
+
+http://127.0.0.1:8000/api/v1/products/1
+
+
+

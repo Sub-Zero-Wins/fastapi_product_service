@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Product API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4xMjM=",
+            "type": "text"
+          },
+          { "key": "Content-Type", "value": "application/json", "type": "text" }
+        ],
+        "url": { "raw": "http://localhost:8000/api/v1/products", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "v1", "products"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Postman Product\",\n  \"description\": \"Testing from Postman\",\n  \"price\": 999.99,\n  \"in_stock\": true\n}"
+        }
+      }
+    }
+  ]
+}
